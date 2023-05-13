@@ -5,11 +5,15 @@ function Todo(props) {
 
     //here props is a js object, where all the attributes added on the element are available as key value pair in this props object, where the attribute name 'text' will be the keys and 'Learn React', 'Master React' etc.. will be the values
 
+    function deleteHandler () {
+        console.log('Clicked!', props.text);
+    }
+
     return (
         <div className="card">
             <h2>{props.text}</h2>
             <div className="actions">
-                <button className="btn">Delete</button>
+                <button className="btn" onClick={deleteHandler}>Delete</button>
             </div>
       </div>
     );
