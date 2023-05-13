@@ -6,7 +6,7 @@ function Todo(props) {
     //here props is a js object, where all the attributes added on the element are available as key value pair in this props object, where the attribute name 'text' will be the keys and 'Learn React', 'Master React' etc.. will be the values
 
     function deleteHandler () {
-        console.log('Clicked!', props.text);
+        // console.log('Clicked!', props.text);
     }
 
     return (
