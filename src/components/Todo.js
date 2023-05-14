@@ -22,19 +22,26 @@ function Todo(props) {
         setModalIsOpen(true);
     }
 
+    function closeModalHandler () {
+        setModalIsOpen(false);
+    }
+
     return (
         <div className="card">
             <h2>{props.text}</h2>
             <div className="actions">
                 <button className="btn" onClick={deleteHandler}>Delete</button>
             </div>
+
             {/* importing modal and backdrop to app.js */}
             {/* now we will use modalIsOpen to conditionally render modal and backdrop component in the JSX code */}
             {/* here if the modalIsOpen is true then it will appear other wise it won't */}
             {/* { modalIsOpen ? <Modal /> : null } */}
             {/* here below using the && operator will check if both modalIsOpen and <Modal /> is true then second value will be returned */}
-            { modalIsOpen && <Modal /> }
-            { modalIsOpen && <Backdrop /> }
+            { modalIsOpen && <Modal onCancel={closeModalHandler} onConfirm={closeModalHandler} /> }
+            { modalIsOpen && <Backdrop onCancel={closeModalHandler} /> }
+            {/* Here we can give any name to this backdrop onCancel prop */}
+            {/* Here we are using the prop to pass the function as a value on the backdrop component. */}
       </div>
     );
 }
