@@ -9,7 +9,7 @@ function Todo(props) {
 
     //here props is a js object, where all the attributes added on the element are available as key value pair in this props object, where the attribute name 'text' will be the keys and 'Learn React', 'Master React' etc.. will be the values
 
-    //This is a react hook and these can only be called directly in component functions, now calling useState creates a state that react is aware of.
+    //This useState is a react hook and these can only be called directly in component functions, now calling useState creates a state that react is aware of.
     //Now we can give a starting value as an argument to the useState, which in this case is false because we want to control whether the modal / overlay is open or not, So to make it default close initially we gave it false value.
     //Now useState returns an array with exactly two elements as it always return an array with two elements which we can store this returned array in a constant or we use array destructuring two store these two elements, which here are modalIsOpen and setModalIsOpen
     //Here the first element 'modalIsOpen' which the useState returns which state returns in its array is the current state snapshot which here is the 'false' value in the modalIsOpen.
